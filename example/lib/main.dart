@@ -22,16 +22,16 @@ class MyApp extends StatelessWidget {
           ),
           brightness: Brightness.light,
           textTheme: TextTheme(
-            body1: TextStyle(color: Color(0xffbbbbbb)),
+            bodyMedium: TextStyle(color: Color(0xffbbbbbb)),
           )
       ),
-      home: new MyHomePage(),
+      home: new MyHomePage(key:ValueKey("homepage")),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({required Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();

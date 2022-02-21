@@ -105,7 +105,7 @@ class FilePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return ChangeNotifierProvider<_CurrentFileSystemEntitiy>(
-      builder: (context) => __currentFileSystemEntitiy,
+      create: (context) => __currentFileSystemEntitiy,
       child: Container(
         color: theme.backgroundColor,
         padding: EdgeInsets.symmetric(
@@ -117,7 +117,7 @@ class FilePicker extends StatelessWidget {
           child: Column(
             children: <Widget>[
               TextField(
-                style: theme.textTheme.body1,
+                style: theme.textTheme.bodyMedium,
                 controller: textEditingController,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(12),
@@ -166,13 +166,13 @@ class FilePicker extends StatelessWidget {
                         }: null,
                       );
                     },
-                    child: Text("Ok", style: TextStyle(color: theme.textTheme.body1.color, fontWeight: FontWeight.w600),),
+                    child: Text("Ok", style: TextStyle(color: theme.textTheme.bodyMedium.color, fontWeight: FontWeight.w600),),
                   ),
                   SizedBox(width: 16,),
                   MaterialButton(
                     elevation: 2,
                     color: Color(0xff4c5052),
-                    child: Text("Cancle", style: theme.textTheme.body1,),
+                    child: Text("Cancle", style: theme.textTheme.bodyMedium,),
                     onPressed: (){
                       onPathSelected(null);
                     },
